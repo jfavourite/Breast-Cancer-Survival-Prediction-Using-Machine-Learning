@@ -1,9 +1,9 @@
-# 🎗️ Breast Cancer Survival Prediction Using Machine Learning
+# Breast Cancer Survival Prediction Using Machine Learning
 ### A Multi-feature Clinical & Genomic ML Pipeline | METABRIC Dataset
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project builds a machine learning pipeline to predict **breast cancer patient survival outcomes** using the METABRIC (Molecular Taxonomy of Breast Cancer International Consortium) dataset. It combines **clinical features** (age, tumour size, hormone receptor status) with **gene expression and mutation data** to train and compare multiple classification models.
 
@@ -11,7 +11,7 @@ The project demonstrates a complete, research-grade ML workflow — from raw dat
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Predict binary survival outcome (`overall_survival`: alive vs deceased)
 - Compare performance of classical ML models on clinical + genomic data
@@ -20,7 +20,7 @@ The project demonstrates a complete, research-grade ML workflow — from raw dat
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 **METABRIC — Breast Cancer Gene Expression Profiles**
 - Source: [Kaggle — METABRIC Dataset](https://www.kaggle.com/datasets/raghadalharbi/breast-cancer-gene-expression-profiles-metabric)
@@ -30,36 +30,36 @@ The project demonstrates a complete, research-grade ML workflow — from raw dat
 
 ---
 
-## 🔬 ML Pipeline
+##  ML Pipeline
 
-### 1. 📥 Data Loading & Exploration
+### 1. Data Loading & Exploration
 - Loaded 1,904 patient records with 693 features
 - Inspected data types, shapes, and distributions
 - Identified target variable: `overall_survival`
 
-### 2. 🧹 Data Cleaning
+### 2. Data Cleaning
 - Dropped columns with >20% missing values (`tumor_stage`, `3-gene_classifier_subtype` etc.)
 - Removed data leakage column: `death_from_cancer`
 - Imputed remaining missing values:
   - Categorical → mode imputation
   - Numerical → median imputation
 
-### 3. ⚙️ Feature Engineering & Encoding
+### 3. Feature Engineering & Encoding
 - Mutation columns (`_mut`) → binarised (0 = no mutation, 1 = mutated)
 - Binary categorical columns → Label Encoding
 - Ordinal column (`cellularity`) → manual ordinal mapping (Low=1, Moderate=2, High=3)
 - Multi-class columns → One-Hot Encoding
 
-### 4. 📊 Feature Selection
+### 4. Feature Selection
 - Removed highly correlated features (threshold > 0.95)
 - Applied **Mutual Information** scoring to rank all features
 - Selected **top 50 features** for modelling
 
-### 5. ✅ Train/Test Split & Scaling
+### 5. Train/Test Split & Scaling
 - Stratified 80/20 train/test split
 - Applied `StandardScaler` (fit on train, transform on test)
 
-### 6. 🤖 Model Training
+### 6. Model Training
 Four models trained and evaluated:
 
 | Model | Accuracy | ROC-AUC |
@@ -69,23 +69,23 @@ Four models trained and evaluated:
 | XGBoost | 0.685 | 0.744 |
 | Neural Network | 0.633 | 0.682 |
 
-### 7. 📈 Evaluation
+### 7. Evaluation
 - Metrics: Accuracy, ROC-AUC, Precision, Recall, F1-score
 - Confusion matrices for all models
 - ROC curve comparison across all models
 
-### 8. 🔍 SHAP Interpretability
+### 8. SHAP Interpretability
 - Applied SHAP (SHapley Additive exPlanations) to the best model (Random Forest)
 - Generated summary dot plot, bar plot, and single-patient waterfall plot
 - Top predictive features identified: `age_at_diagnosis`, `nottingham_prognostic_index`, `brca1`
 
-### 9. ✅ Cross Validation
+### 9. Cross Validation
 - 5-Fold Stratified Cross Validation on Random Forest
 - **Mean AUC: 0.747 ± 0.013** — confirms model stability and generalisability
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 - **Best Model:** Random Forest (AUC = 0.747)
 - **Cross-Validation AUC:** 0.747 ± 0.013 (stable across all 5 folds)
@@ -99,13 +99,13 @@ Four models trained and evaluated:
 
 ---
 
-## 🧬 Clinical Relevance
+##  Clinical Relevance
 
 The alignment between model-identified features and established clinical knowledge (NPI, BRCA1, age) validates the approach. The lower recall for deceased patients across models reflects a class imbalance challenge and highlights an important direction for future work — improving sensitivity for high-risk patients is clinically critical.
 
 ---
 
-## 🚀 How To Run
+## How To Run
 
 ### 1. Clone the repository
 ```bash
@@ -129,7 +129,7 @@ Open `breast_cancer_ML.ipynb` and run all cells.
 
 ---
 
-## 👤 Author
+## Author
 
 IMHANBOR JOSEPH OSEMUDIAMEN
 BSc in Biochemistry 
