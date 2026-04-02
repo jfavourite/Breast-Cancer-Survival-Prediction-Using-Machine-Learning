@@ -1,0 +1,5 @@
+Model,Accuracy,ROC-AUC,CV_AUC_Mean,CV_AUC_Std
+Logistic Regression,0.664,0.7193,,
+Random Forest,0.6877,0.7466,0.7474,0.0126
+XGBoost,0.685,0.7442,,
+Neural Network,0.6325,0.6819,,
