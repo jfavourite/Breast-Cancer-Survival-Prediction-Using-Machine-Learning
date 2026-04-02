@@ -28,23 +28,6 @@ The project demonstrates a complete, research-grade ML workflow — from raw dat
 - Features: 693 (clinical, gene expression, mutation status)
 - Target: `overall_survival` (0 = Alive, 1 = Deceased)
 
-> ⚠️ The dataset file (`METABRIC_RNA_Mutation.csv`) is **not included** in this repository due to size. Download it directly from Kaggle using the link above.
-
----
-
-## 🗂️ Repository Structure
-
-```
-breast_cancer_project/
-│
-├── breast_cancer_ML.ipynb       # Main Jupyter Notebook (full pipeline)
-├── model_results.csv            # Model performance comparison table
-├── random_forest_model.pkl      # Saved best model (Random Forest)
-├── scaler.pkl                   # Saved StandardScaler object
-├── requirements.txt             # Python dependencies
-└── README.md                    # Project documentation (this file)
-```
-
 ---
 
 ## 🔬 ML Pipeline
@@ -146,43 +129,12 @@ Open `breast_cancer_ML.ipynb` and run all cells.
 
 ---
 
-## 🛠️ Dependencies
-
-```
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-xgboost
-shap
-joblib
-jupyter
-```
-
-Install all at once:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap joblib notebook
-```
-
----
-
-## 🔮 Future Work
-
-- Address class imbalance with SMOTE oversampling
-- Hyperparameter tuning with GridSearchCV
-- Survival analysis with Cox Proportional Hazards model
-- Deep learning with larger datasets (TCGA-BRCA)
-- Multi-modal fusion with raw RNA-seq data
-
----
-
 ## 👤 Author
 
-**[Your Name]**
-BSc/MSc in [Your Field] | PhD Applicant
-[Your Institution]
-[Your Email] | [LinkedIn] | [GitHub]
+IMHANBOR JOSEPH OSEMUDIAMEN
+BSc in Biochemistry 
+Lagos State University. Nigeria.
+josephimhanbor@gmail.com
 
 ---
 
